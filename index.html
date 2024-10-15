@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PortFolio</title>
+  <link rel="stylesheet" href="./style.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./tailwind.js"></script>
+  <script src="https://kit.fontawesome.com/ddea762b36.js" crossorigin="anonymous"></script>
+
+  <style type="text/tailwindcss">
+    @layer base {
+        h1 {
+          @apply text-h1 font-open  text-white;
+        }
+        h2 {
+          @apply text-h2 font-open text-white;
+        }
+
+        h3 {
+          @apply text-h3 font-open text-white;
+        }
+
+        h4 {
+          @apply text-h4 font-open text-white;
+        }
+
+        h5 {
+          @apply text-h5 font-open text-white;
+        }
+
+        h6 {
+          @apply text-h6 font-open text-white;
+        }
+
+        p {
+          @apply text-p font-open text-white;
+        }
+
+        ul > li {
+          @apply text-link font-inter text-white;
+        }
+
+        ol > li {
+          @apply text-link font-inter text-white;
+        }
+        button {
+          @apply text-button font-inter text-white bg-secondary;
+        }
+
+        a {
+          @apply font-open text-link  text-white hover:text-white;
+        }
+      }
+
+      @layer components {
+        .nav {
+          @apply relative;
+        }
+        .nav::after {
+          @apply content-[''] absolute bg-secondary h-[3px] w-[0%] left-0 -bottom-[5px] rounded-xl duration-300;
+        }
+        .nav:hover::after {
+          @apply w-[100%];
+        }
+      }
+    </style>
+</head>
+
+<body>
+  <main>
+    <section id="home" class="flex flex-col mx-auto px-[10%] py-10 h-screen">
+      <div class="container flex items-center">
+        <header class="flex justify-between items-center w-full">
+          <a href="#" class="flex items-center">
+            <h2><span class="text-secondary text-h1">K</span>USH</h2>
+            <span class="sr-only">Kush logo</span>
+          </a>
+
+          <div class="flex gap-5 items-center">
+            <nav>
+              <ul id="sidemenu" class="flex max-[990px]:block gap-10 items-center">
+                <li><a href="#home" class="nav">Home</a></li>
+                <li><a href="#about" class="nav">About</a></li>
+                <li><a href="#services" class="nav">Services</a></li>
+                <li><a href="#skills" class="nav">Skills</a></li>
+                <li><a href="#tasks" class="nav">Tasks</a></li>
+                <a href="#connect" class="max-[990px]:hidden">
+                  <button class="button">
+                    <span class="button-content">Connect🤝</span>
+                  </button>
+                </a>
+                <i class="fas fa-times" onclick="closemenu()"
+                  style="cursor: pointer; font-size: 40px; color: white;"></i>
+              </ul>
+
+              <i class="fas fa-bars" onclick="openmenu()" style="cursor: pointer; font-size: 40px; color: #e8eaed;"></i>
+            </nav>
+          </div>
+        </header>
+      </div>
+
+      <div class="flex h-full items-center mt-20">
+        <div class="min-[320px]:w-full flex flex-grow-[600px] flex-col justify-center">
+          <h2 class="font-bold md:text-h3 min-[320px]:text-h4">
+            Hello, My Name Is
+          </h2>
+          <h2 class="md:text-[80px] min-[320px]:text-[40px]">
+            <span class="text-secondary">K</span>ush
+            <span class="text-secondary">V</span>aishnav
+          </h2>
+          <div class="flex max-[678px]:items-center md:gap-5 min-[320px]:gap-2">
+            <h3 class="md:text-[40px] min-[320px]:text-h5">I'm A</h3>
+            <img class="mt-2 md:max-w-[70%] min-[320px]:max-w-[70%]"
+              src="https://readme-typing-svg.herokuapp.com?font=Righteous&size=35&duration=4000&pause=500&color=61892F&random=false&width=435&lines=Front-End+Developer;Web+Developer;Freelancer"
+              alt="Typing SVG" />
+          </div>
+
+          <!-- Buttons -->
+          <ul class="example-2 mt-[30px]">
+            <li class="icon-content">
+              <a href="https://www.linkedin.com/in/kush-vaishnav-b47279281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank" aria-label="LinkedIn" data-social="linkedin">
+                <div class="filled"></div>
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <div class="tooltip">LinkedIn</div>
+            </li>
+            <li class="icon-content">
+              <a href="https://github.com/kush0234" target="_blank" aria-label="GitHub" data-social="github">
+                <div class="filled"></div>
+                <i class="fab fa-github"></i>
+              </a>
+              <div class="tooltip">GitHub</div>
+            </li>
+            <li class="icon-content">
+              <a href="https://www.instagram.com/kushvaishnav234/" target="_blank" aria-label="Instagram"
+                data-social="instagram">
+                <div class="filled"></div>
+                <i class="fab fa-instagram"></i>
+              </a>
+              <div class="tooltip">Instagram</div>
+            </li>
+            <li class="icon-content">
+              <a href="https://wa.me/8511060234" aria-label="Whatsapp" data-social="Whatsapp" target="_blank">
+                <div class="filled"></div>
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <div class="tooltip">Whatsapp</div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="mx-auto px-[10%] py-10 h-fit">
+      <div class="h-full">
+        <div class="text-center">
+          <h2 class="underline">About Me</h2>
+          <h3 class="text-secondary text-h6">Who i am</h3>
+        </div>
+
+        <div class="flex flex-wrap max-[768px]:flex-col justify-center max-[990px]:items-center gap-10 w-full mt-10">
+          <div class="basis-[35%]">
+
+            <img class="rounded-2xl h-[500px] object-contain w-fit duration-500 hover:rounded-[50%]"
+              src="./imges/Hero.jpg" alt="Auther_img" />
+
+
+          </div>
+
+          <div class="flex-1">
+            <div class="flex items-center gap-3">
+              <!-- <p class="lg:text-h3 max-w-fit font-semibold text-h6 " > I'm Nirav</p> -->
+              <p class="text-h3">I'am</p>
+              <span class="w-fit"><img class="mt-5 w-fit"
+                  src="https://readme-typing-svg.herokuapp.com?font=Righteous&size=35&duration=4000&pause=500&color=61892F&random=false&width=435&lines=Front-End+Developer;Web+Developer;Freelancer"
+                  alt="Typing SVG" /></span>
+            </div>
+            <p class="text-justify mt-5">
+              Crafting Intuitive And Responsive Web Experiences With A Passion
+              For Innovation And Creativity, I'm Kush Vaishnav, A 20 Year Old
+              Web Developer Currently persuing My First Year in <strong class="underline">Master's Of Compuer
+                Applications(MCA)</strong>. Excited To Dive
+              Into The World Of Web Development And
+              Create Engaging User Experiences.
+            </p>
+
+            <ul class="mt-5 list">
+              <li>Profession (Web Developer)</li>
+              <li>Education (MCA Student)</li>
+              <li>Skills (Intuitive and Responsive Web Experiences, Backend Development)</li>
+              <li>Personality (Passionate, Innovative, And Creative)</li>
+            </ul>
+            <!-- Resume button -->
+            <a href="./Kush_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <button class="button mt-5">
+                <span class="button-content">Resume 📑 </span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="services" class="mx-auto px-[10%] py-10 h-full">
+      <div class="container h-fit">
+        <div class="text-center">
+          <h2 class="underline">My Services</h2>
+          <h3 class="text-secondary text-h6">What i provide</h3>
+        </div>
+        <div class="containers grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-4">
+          <!-- cards -->
+          <div class="card">
+            <div class="content">
+              <div class="back">
+                <div class="back-content">
+                  <img class="h-full rounded-3xl object-contain" src="./imges/uxui.png" alt="uxui_img" />
+                </div>
+              </div>
+              <div class="front">
+                <div class="img">
+                  <div class="circle"></div>
+                  <div class="circle" id="right"></div>
+                  <div class="circle" id="bottom"></div>
+                </div>
+
+                <div class="front-content">
+                  <small class="badge text-[20px]">1</small>
+                  <div class="description">
+                    <div class="title">
+                      <p class="title text-h3 my-3">UX/UI Designer</p>
+                    </div>
+                    <div>
+                      <p class="m-4">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Error architecto dicta, possimus consequuntur a
+                        voluptatum.
+                      </p>
+                    </div>
+                    <p class="card-footer">
+                      <a href="#">Read More</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="content">
+              <div class="back">
+                <div class="back-content">
+                  <img class="h-full rounded-3xl object-contain" src="./imges/wrb-devloper.webp" alt="Auther_img" />
+                </div>
+              </div>
+              <div class="front">
+                <div class="img">
+                  <div class="circle"></div>
+                  <div class="circle" id="right"></div>
+                  <div class="circle" id="bottom"></div>
+                </div>
+
+                <div class="front-content">
+                  <small class="badge text-[20px]">2</small>
+                  <div class="description">
+                    <div class="title">
+                      <p class="title text-h3 my-3">Web Developer</p>
+                    </div>
+                    <div>
+                      <p class="m-4">
+                        Passionate coder 🚀 | Sharing the joy of coding
+                        through posts and tutorials 💻 | Join me on this
+                        journey to explore the world of programming!
+                      </p>
+                    </div>
+                    <p class="card-footer">
+                      <a href="#">Read More</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="content">
+              <div class="back">
+                <div class="back-content">
+                  <img class="h-full rounded-3xl object-contain" src="./imges/app-design.avif" alt="Auther_img" />
+                </div>
+              </div>
+              <div class="front">
+                <div class="img">
+                  <div class="circle"></div>
+                  <div class="circle" id="right"></div>
+                  <div class="circle" id="bottom"></div>
+                </div>
+
+                <div class="front-content">
+                  <small class="badge text-[20px]">3</small>
+                  <div class="description">
+                    <div class="title">
+                      <p class="title text-h3 my-3">App Developer</p>
+                    </div>
+                    <div>
+                      <p class="m-4">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Error architecto dicta, possimus consequuntur a
+                        voluptatum.
+                      </p>
+                    </div>
+                    <p class="card-footer">
+                      <a href="#">Read More</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="mx-auto px-[10%] py-10 h-full">
+      <div class="text-center mb-10">
+        <h2 class="underline">My Skills</h2>
+        <p class="text-secondary text-h6">What I Know</p>
+      </div>
+
+      <div class="flex max-[990px]:flex-col flex-wrap m-5 gap-5">
+        <div class="flex-1 p-1">
+          <p class="text-h5">My creative skills & experiences.</p>
+          <p class="text-justify mt-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nulla
+            veniam expedita consequuntur, explicabo eius alias dolore
+            voluptates veritatis eaque? Iusto debitis necessitatibus, eius
+            nostrum modi distinctio omnis dolorem amet laborum maxime
+            exercitationem quidem delectus quibusdam alias placeat. Impedit
+            porro nisi voluptate repudiandae, excepturi reiciendis quos ipsum
+            cumque non. Et.
+          </p>
+
+          <a href="#">
+            <button class="button mt-5">
+              <span class="button-content">Read More🧾</span>
+            </button>
+          </a>
+        </div>
+
+        <div class="flex-1">
+          <div class="mb-3">
+            <div class="flex justify-between items-center text-white mb-1">
+              <span>HTML</span>
+              <span>90%</span>
+            </div>
+            <div class="line h-[6px] w-full bg-white relative" data-skill="90%"></div>
+          </div>
+
+          <div class="mb-3">
+            <div class="flex justify-between items-center text-white mb-1">
+              <span>CSS</span>
+              <span>85%</span>
+            </div>
+            <div class="line h-[6px] w-full bg-white relative" data-skill="85%"></div>
+          </div>
+
+          <div class="mb-3">
+            <div class="flex justify-between items-center text-white mb-1">
+              <span>JAVASCRIPT</span>
+              <span>70%</span>
+            </div>
+            <div class="line h-[5px] w-full bg-white relative" data-skill="70%"></div>
+          </div>
+
+          <div class="mb-4">
+            <div class="flex justify-between items-center text-white mb-1">
+              <span>TAILWIND CSS</span>
+              <span>90%</span>
+            </div>
+            <div class="line h-[6px] w-full bg-white relative" data-skill="90%"></div>
+          </div>
+
+          <div class="mb-3">
+            <div class="flex justify-between items-center text-white mb-1">
+              <span>REACT JS</span>
+              <span>65%</span>
+            </div>
+            <div class="line h-[6px] w-full bg-white relative" data-skill="65%"></div>
+          </div>
+
+          <div class="mb-3">
+            <div class="flex justify-between items-center text-white mb-1">
+              <span>REDUX</span>
+              <span>70%</span>
+            </div>
+            <div class="line h-[6px] w-full bg-white relative" data-skill="70%"></div>
+          </div>
+
+          <div class="mb-3">
+            <div class="flex justify-between items-center text-white mb-1">
+              <span>GIT</span>
+              <span>75%</span>
+            </div>
+            <div class="line h-[6px] w-full bg-white relative" data-skill="75%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tasks" class="mx-auto px-[10%] py-10 h-full">
+      <div class="text-center mb-10">
+        <h2 class="underline">My Tasks</h2>
+        <p class="text-secondary text-h6">What I Do</p>
+      </div>
+
+      <div
+        class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 justify-items-center items-center pb-10">
+        <div class="bg-box overflow-hidden px-9 py-6 rounded-lg w-fit">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img class="task rounded-full object-cover h-[150px] w-[150px]" src="./imges/portfolio1.webp"
+              alt="portfolio1" />
+          </a>
+        </div>
+
+        <div class="bg-box overflow-hidden px-9 py-6 rounded-lg w-fit">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img class="task rounded-full object-cover h-[150px] w-[150px]" src="./imges/html-css.jpg"
+              alt="portfolio1" />
+          </a>
+        </div>
+
+        <div class="bg-box overflow-hidden px-9 py-6 rounded-lg w-fit">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img class="task rounded-full object-cover h-[150px] w-[150px]" src="./imges/tic tac toe.png"
+              alt="portfolio1" />
+          </a>
+        </div>
+
+        <div class="bg-box overflow-hidden px-9 py-6 rounded-lg w-fit">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img class="task rounded-full object-cover h-[150px] w-[150px]" src="./imges/Top-Ecommerce-Websites.jpg"
+              alt="portfolio1" />
+          </a>
+        </div>
+
+        <div class="bg-box overflow-hidden px-9 py-6 rounded-lg w-fit">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img class="task rounded-full object-cover h-[150px] w-[150px]" src="./imges/Top-Ecommerce-Websites.jpg"
+              alt="portfolio1" />
+          </a>
+        </div>
+
+        <div class="bg-box overflow-hidden px-9 py-6 rounded-lg w-fit">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img class="task rounded-full object-cover h-[150px] w-[150px]" src="./imges/javascript.png"
+              alt="portfolio1" />
+          </a>
+        </div>
+
+        <div class="bg-box overflow-hidden px-9 py-6 rounded-lg w-fit">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img class="task rounded-full object-cover h-[150px] w-[150px]" src="./imges/movie-app.jpeg"
+              alt="portfolio1" />
+          </a>
+        </div>
+
+        <div class="bg-box overflow-hidden px-9 py-6 rounded-lg w-fit">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img class="task rounded-full object-cover h-[150px] w-[150px]" src="./imges/quiz-app.jpeg"
+              alt="portfolio1" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="connect" class="mx-auto px-[10%] py-10 h-full">
+      <div>
+        <div class="text-center mb-10 p-5">
+          <h2 class="underline">Contact Me</h2>
+          <p class="text-secondary text-h6">Get in touch</p>
+        </div>
+
+        <div class="flex max-[990px]:flex-col gap-5">
+          <div class="flex-1 sm:p-3">
+            <div class="mb-5">
+              <h4 class="mb-3">Get in touch</h4>
+              <p class="text-justify">
+                If you have any questions or just want to connect, feel free to reach out!
+              </p>
+            </div>
+
+            <div class="flex gap-5 items-center mb-5">
+              <i class="fas fa-user text-green h-[25px]"></i>
+              <div>
+                <p class="font-semibold text-[18px]">Name</p>
+                <p class="font-semibold text-[18px]">Kush Vaishnav</p>
+              </div>
+            </div>
+
+            <div class="flex gap-5 items-center mb-5">
+              <i class="fas fa-phone text-green h-[25px]"></i>
+              <div>
+                <p class="font-semibold text-[18px]">Phone</p>
+                <p class="font-semibold text-[18px]">+91 85110 60234</p>
+              </div>
+            </div>
+
+            <div class="flex gap-5 items-center mb-5">
+              <i class="fas fa-envelope text-green h-[25px]"></i>
+              <div>
+                <p class="font-semibold text-[18px]">Email</p>
+                <p class="font-semibold text-[18px] max-[550px]:text-[15px] max-[550px]:font-medium">
+                  kushvaishnav234@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-1 p-4">
+            <div class="font-semibold text-[20px] text-white">Message Me</div>
+            <div>
+              <form name="submit-to-google-sheet">
+                <div class="flex max-[768px]:flex-col min-[768px]:gap-10 w-full">
+                  <div class="form-control w-full">
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" name="Name" id="name" required aria-label="Name" />
+                    <label>
+                      <span style="transition-delay: 200ms">N</span><span style="transition-delay: 250ms">a</span><span
+                        style="transition-delay: 300ms">m</span><span style="transition-delay: 350ms">e</span>
+                    </label>
+                  </div>
+
+                  <div class="form-control w-full">
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" name="Email" id="email" required aria-label="Email" />
+                    <label>
+                      <span style="transition-delay: 0ms">E</span><span style="transition-delay: 50ms">m</span><span
+                        style="transition-delay: 100ms">a</span><span style="transition-delay: 150ms">i</span><span
+                        style="transition-delay: 200ms">l</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-control w-full">
+                  <label for="subject" class="sr-only">Subject</label>
+                  <input type="text" name="Subject" id="subject" required aria-label="Subject" />
+                  <label>
+                    <span style="transition-delay: 0ms">S</span><span style="transition-delay: 50ms">u</span><span
+                      style="transition-delay: 100ms">b</span><span style="transition-delay: 150ms">j</span><span
+                      style="transition-delay: 200ms">e</span><span style="transition-delay: 250ms">c</span><span
+                      style="transition-delay: 300ms">t</span>
+                  </label>
+                </div>
+
+                <div class="form-control w-full">
+                  <label for="message" class="sr-only">Message</label>
+                  <textarea type="text" name="message" id="message" required aria-label="Message"></textarea>
+                  <label>
+                    <span style="transition-delay: 0ms">M</span><span style="transition-delay: 50ms">e</span><span
+                      style="transition-delay: 100ms">s</span><span style="transition-delay: 150ms">s</span><span
+                      style="transition-delay: 200ms">a</span><span style="transition-delay: 250ms">g</span><span
+                      style="transition-delay: 300ms">e</span>
+                  </label>
+                </div>
+
+                <button class="button" type="submit">
+                  <span class="button-content">Send Message 💬</span>
+                </button>
+              </form>
+              <span id="msg" class="text-secondary mt-10 block"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer id="footer" class="bg-gray-900 p-10 font-[sans-serif] tracking-wide mx-auto px-[10%] py-10 h-fit">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="lg:flex lg:items-center">
+        <a href="javascript:void(0)">
+          <h2 class="flex md:text-[50px] min-[320px]:text-[40px]">
+            <span class="text-secondary">K</span>ush
+          </h2>
+        </a>
+      </div>
+
+      <div class="lg:flex lg:items-center">
+        <ul class="flex space-x-6">
+          <li>
+            <a href="https://www.instagram.com/__nirav27.__/" target="_blank">
+              <i class="fab fa-instagram fill-white w-7 h-7"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/nirav-nayi/" target="_blank">
+              <i class="fab fa-linkedin fill-white w-7 h-7"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-twitter fill-white w-7 h-7"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-6 text-white">Contact Us</h4>
+        <ul class="space-y-4">
+          <li>
+            <a href="#" class="text-gray-300 hover:text-white text-sm">Email</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="text-gray-300 hover:text-white text-sm">Phone</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="text-gray-300 hover:text-white text-sm">Address</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-6 text-white">Information</h4>
+        <ul class="space-y-4">
+          <li>
+            <a href="javascript:void(0)" class="text-gray-300 hover:text-white text-sm">About Us</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="text-gray-300 hover:text-white text-sm">Terms &amp; Conditions</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="text-gray-300 hover:text-white text-sm">Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="text-center text-gray-300 text-sm mt-14">
+      © 2024<a href="#" class="hover:underline mx-1">Kush</a>All Rights
+      Reserved.
+    </p>
+  </footer>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const lines = document.querySelectorAll(".line");
+      lines.forEach((line) => {
+        const skillLevel = line.getAttribute("data-skill");
+        line.style.setProperty("--skill-level", skillLevel);
+      });
+    });
+  </script>
+
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+      sidemenu.style.right = "0";
+    }
+    function closemenu() {
+      sidemenu.style.right = "-200px";
+    }
+  </script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyY5O8K2ENB9qowmJTuz04URFtQxeANkeSWEYEH-M0PoumD35dGVHREYlZLe4EBSzyn/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          msg.innerHTML = "Message Sent Successfully"
+          setTimeout(function () {
+            msg.innerHTML = ""
+          }, 5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+
+</html>
